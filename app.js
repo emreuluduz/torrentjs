@@ -19,7 +19,7 @@ app.use((req, res, next) => {
     console.log('index get');
 
     res.status(200).json({
-        message: 'Hello World!!Deployed'
+        message: 'Hello World!!Deployed!'
     });
 });
 
