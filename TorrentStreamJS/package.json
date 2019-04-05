@@ -1,0 +1,21 @@
+{
+  "name": "torrent-stream-js",
+  "version": "0.0.0",
+  "description": "TorrentStreamJS",
+  "main": "server.js",
+  "author": {
+    "name": "castielizm"
+  },
+  "dependencies": {
+    "webtorrent": "0.103.1",
+    "webtorrent-hybrid": "2.1.0",
+    "express": "4.16.4",
+    "memory-chunk-store": "1.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
