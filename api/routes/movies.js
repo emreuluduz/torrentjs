@@ -7,7 +7,7 @@ router.get('/:torrentId', (req, res, next) => {
     var client = new webtorrent();
     var date = new Date();
     var torrentId = req.params.torrentId;
-    const directoryPath = path.join("../data/tmp/", "torrent");
+    const directoryPath = path.join("C:/", "torrent");
     fs.ensureDir(directoryPath);
     var torrent = client.add(torrentId, { path: directoryPath }, function (torrent) {
     });
