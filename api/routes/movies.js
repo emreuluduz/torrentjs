@@ -45,9 +45,9 @@ router.get('/:torrentId', (req, res, next) => {
         var stream = file.createReadStream(stream_position);
         stream.pipe(res);
 
-        stream.on("readable", function () {
-            deleteDownloadedFiles(directoryPath);
-        });
+        //stream.on("readable", function () {
+        //    deleteDownloadedFiles(directoryPath);
+        //});
         stream.on("error", function (err) {
             return next(err);
         });
