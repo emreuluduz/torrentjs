@@ -9,9 +9,9 @@ router.get('/:torrentId', (req, res, next) => {
     var torrentId = req.params.torrentId;
     const directoryPath = path.join("C:/", "torrent");
     fs.ensureDir(directoryPath);
-    var torrent = client.add(torrentId, {  }, function (torrent) {
+    var torrent = client.add(torrentId, function (torrent) {
     });
-    torrent.on('metadata', function () {
+    torrent.on('ready', function () {
         console.log('torrent ready time: ' + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
         var file = torrent.files.find(function (file) {
             return file.name.endsWith('.mp4')
